@@ -2,8 +2,4 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="grey">#607274</color>
-    <color name="beige">#FAEED1</color>
-    <color name="coffee">#DED0B6</color>
-    <color name="blabla">#B2A59B</color>
 </resources>
