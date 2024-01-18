@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="@string/WelcomeBack"
         android:gravity="center"
-        android:textSize="20sp"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,10 +40,10 @@
         android:id="@+id/editText1"
         android:layout_width="270dp"
         android:layout_height="52dp"
-        android:autofillHints="password"
         android:ems="10"
-        android:hint="@string/Password"
         android:inputType="textPassword"
+        android:autofillHints="password"
+        android:hint="@string/Password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -89,19 +89,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.721" />
-
-    <Button
-        android:id="@+id/asguest"
-        android:layout_width="164dp"
-        android:layout_height="48dp"
-        android:background="@android:color/transparent"
-        android:text="@string/ContinueAsAGuest"
-        android:textColor="@color/black"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.815" />
 </androidx.constraintlayout.widget.ConstraintLayout>
