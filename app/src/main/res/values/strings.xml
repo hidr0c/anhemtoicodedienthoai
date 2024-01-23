@@ -17,4 +17,6 @@
     <string name="ReEnterPassword">ReEnter Password</string>
     <string name="Signup">Sign up</string>
     <string name="Email">Email</string>
+    <string name="AccountRecovery">Account Recovery</string>
+    <string name="Submit">Submit</string>
 </resources>
