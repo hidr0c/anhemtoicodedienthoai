@@ -13,4 +13,8 @@
     <string name="LoginRegister">Login/Register</string>
     <string name="HelloGuest">Hello, Guest</string>
     <string name="Searchmanga">Search manga</string>
+    <string name="Welcome">Welcome</string>
+    <string name="ReEnterPassword">ReEnter Password</string>
+    <string name="Signup">Sign up</string>
+    <string name="Email">Email</string>
 </resources>
