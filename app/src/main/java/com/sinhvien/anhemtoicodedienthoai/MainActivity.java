@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView navBar;
     FrameLayout frame;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 if(id==R.id.bookmarks)
                 {
                     /*loadFragment(fm,new BookmarksFragment());*/
+                  
                     Toast.makeText(MainActivity.this, "You need an account to use this feature ", Toast.LENGTH_SHORT).show();
                     return false;
                 }
