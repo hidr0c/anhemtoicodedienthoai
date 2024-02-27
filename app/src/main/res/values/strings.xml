@@ -19,4 +19,5 @@
     <string name="Email">Email</string>
     <string name="AccountRecovery">Account Recovery</string>
     <string name="Submit">Submit</string>
+    <string name="ContinueAsAGuest"><u>Continue as a guest</u></string>
 </resources>
