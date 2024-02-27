@@ -19,12 +19,13 @@
         android:layout_marginStart="30dp"/>
 
     <Button
+        android:id="@+id/btnlg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="260dp"
         android:layout_marginTop="100dp"
         android:background="@android:color/transparent"
-        android:onClick="btn"
+        android:onClick="btnlq"
         android:text="@string/LoginRegister"
         android:textColor="@color/black"
         android:textSize="15sp"
