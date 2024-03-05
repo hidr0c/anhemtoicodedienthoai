@@ -82,15 +82,30 @@
         android:id="@+id/button2"
         android:layout_width="160dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="124dp"
+        android:layout_marginEnd="244dp"
+        android:background="@color/vc"
         android:text="@string/Signup"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="italic"
-        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.655"
-        android:background="@color/vc"/>
+        app:layout_constraintVertical_bias="0.692" />
+
+    <Button
+        android:id="@+id/buttonBackR"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/vc"
+        android:text="@string/Back"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.691" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

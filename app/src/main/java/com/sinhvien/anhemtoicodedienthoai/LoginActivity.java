@@ -26,7 +26,21 @@ Button login, register, forgotpass , asguest ;
                 startActivity(intent);
             }
         });
+forgotpass.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
+        startActivity(intent);
+    }
+});
 
+register.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+        startActivity(intent);
+    }
+});
 
 
         login.setOnClickListener(new View.OnClickListener() {
