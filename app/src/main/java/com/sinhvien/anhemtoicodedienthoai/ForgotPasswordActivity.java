@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
-Button buttonBackF;
+Button buttonBackF,btnforgotpasssumbit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -37,7 +37,7 @@ public class RegisterActivity extends AppCompatActivity {
         btnregi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (String.valueOf(regiusername.getText()).length() >= 4) {
+                if (String.valueOf(regiusername.getText()).length() >= 4 && String.valueOf(regipassword.getText()).length() >=4 ) {
                     accountControl= new AccountControl(getApplicationContext(), AccountControl.DATABASE_NAME, null, 1);
                     accountControl.insertData(String.valueOf(regiusername.getText()), String.valueOf(regipassword.getText()), String.valueOf(regiemail.getText()));
                     Toast.makeText(RegisterActivity.this, "Register Success", Toast.LENGTH_SHORT).show();
