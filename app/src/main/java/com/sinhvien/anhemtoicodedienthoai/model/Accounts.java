@@ -5,7 +5,6 @@ import java.io.Serializable;
 public class Accounts implements Serializable {
     String username;
     String password;
-
     String email;
 
     public String getEmail() {

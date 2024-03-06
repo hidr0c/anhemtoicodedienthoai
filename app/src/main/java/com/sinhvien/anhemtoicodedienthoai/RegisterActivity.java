@@ -59,5 +59,8 @@ public class RegisterActivity extends AppCompatActivity {
     private void addControls() {
         buttonBackR=findViewById(R.id.buttonBackR);
         btnregi=findViewById(R.id.btnregi);
+        regiusername=findViewById(R.id.regiusername);
+        regipassword=findViewById(R.id.regipassword);
+        regiemail=findViewById(R.id.regiemail);
     }
 }

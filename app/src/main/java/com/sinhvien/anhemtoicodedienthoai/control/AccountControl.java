@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class AccountControl extends SQLiteOpenHelper {
     public static final String DATABASE_NAME ="MangaAccount";
     public static final int DATABASE_VERSION=1;
-    public static final String DATABASE_PATH ="/data/data/database/account.db";
+    public static final String DATABASE_PATH ="/data/data/com.sinhvien.anhemtoicodedienthoai/database/MangaAccount.db";
     public static final String TABLE_NAME="ACCOUNTS";
     public static final String IDAccount="id";
     public static final String Username="username";
@@ -40,7 +40,7 @@ public class AccountControl extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db =SQLiteDatabase.openDatabase(DATABASE_PATH,null,SQLiteDatabase.CREATE_IF_NECESSARY);
-        String sql= "Create table if not EXISTS " + TABLE_NAME + "("+ IDAccount + "INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE,"+Username+ "TEXT NOT NULL," + Password + "TEXT NOT NULL)";
+        String sql= "Create table if not EXISTS " + TABLE_NAME + "("+ IDAccount + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE,"+Username+ " TEXT NOT NULL," + Password + " TEXT NOT NULL," + Email + " TEXT NOT NULL)";
         db.execSQL(sql);
         db.close();
     }

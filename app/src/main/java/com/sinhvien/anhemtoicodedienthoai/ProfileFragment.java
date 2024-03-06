@@ -10,6 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.sinhvien.anhemtoicodedienthoai.model.Accounts;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,7 +23,8 @@ import android.widget.Button;
  */
 public class ProfileFragment extends Fragment {
 
-Button btnlq;
+Button btnlq, btnlogout;
+TextView txthello;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -50,6 +56,7 @@ Button btnlq;
         return fragment;
 
     }
+    public static ArrayList<Accounts> LSAccounts;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -63,9 +70,14 @@ Button btnlq;
         }
 
 
-
     }
 
+    private void addControls(View view) {
+        txthello=view.findViewById(R.id.hello);
+        btnlogout=view.findViewById(R.id.btnlogout);
+        btnlq=view.findViewById(R.id.btnlg);
+
+    }
 
 
     @Override
@@ -73,7 +85,17 @@ Button btnlq;
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-       btnlq=view.findViewById(R.id.btnlg);
+        addControls(view);
+        for(Accounts accounts: LSAccounts){
+            txthello.setText("Hello," + " "+ accounts.getUsername());
+        }
+        if(txthello.getText().equals("Hello, Guest")){
+            btnlogout.setVisibility(View.GONE);
+            btnlq.setVisibility(View.VISIBLE);
+        }else {
+            btnlq.setVisibility(View.GONE);
+            btnlogout.setVisibility(View.VISIBLE);
+        }
         btnlq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
