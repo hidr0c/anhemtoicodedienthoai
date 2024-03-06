@@ -7,10 +7,14 @@
     android:background="@color/beige">
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.appcompat.widget.SearchView
+<!--    <androidx.appcompat.widget.SearchView
         android:layout_width="match_parent"
         android:layout_height="74dp"
         android:layout_marginTop="100dp"
-        android:text="@string/Searchmanga" />
+        android:text="@string/Searchmanga" />-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/Searchmanga"/>
 
 </FrameLayout>

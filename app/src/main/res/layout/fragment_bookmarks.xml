@@ -10,7 +10,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="37dp"
-        android:background="@color/grey"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_gravity="center"
+        android:text="     You haven't bookmarked any manga yet"
+        android:textColor="@color/grey"
+        android:textSize="20sp" />
 
 </FrameLayout>

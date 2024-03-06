@@ -131,15 +131,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if(id==R.id.bookmarks)
                 {
-                    /*loadFragment(fm,new BookmarksFragment());*/
+                    loadFragment(fm,new BookmarksFragment());
                   
-                    Toast.makeText(MainActivity.this, "You need an account to use this feature ", Toast.LENGTH_SHORT).show();
+                   /* Toast.makeText(MainActivity.this, "You need an account to use this feature ", Toast.LENGTH_SHORT).show();*/
                     return false;
-                }
-                if(id==R.id.settings)
-                {
-                    loadFragment(fm,new SettingsFragment());
-                    return true;
                 }
                 if(id==R.id.search)
                 {
