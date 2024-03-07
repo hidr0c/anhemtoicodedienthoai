@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
                     loadFragment(fm,new BookmarksFragment());
                   
                    /* Toast.makeText(MainActivity.this, "You need an account to use this feature ", Toast.LENGTH_SHORT).show();*/
-                    return false;
+                    return true;
                 }
                 if(id==R.id.search)
                 {
