@@ -11,5 +11,7 @@
     <color name="vc">#00ffffff</color>
     <color name="maurenzi2">#d5f2f5</color>
     <color name="darkgreen">#12484E</color>
+    <color name="hint">#8A8A8A</color>
+    <color name="rating">#F8B200</color>
 
 </resources>
