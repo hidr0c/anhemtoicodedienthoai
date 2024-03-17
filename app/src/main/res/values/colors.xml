@@ -13,5 +13,6 @@
     <color name="darkgreen">#12484E</color>
     <color name="hint">#8A8A8A</color>
     <color name="rating">#F8B200</color>
+    <color name="main_blue">#45AEFF</color>
 
 </resources>

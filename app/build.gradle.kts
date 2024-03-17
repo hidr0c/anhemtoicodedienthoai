@@ -38,6 +38,8 @@ dependencies {
 
     implementation ("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation ("com.github.tachiyomiorg:DirectionalViewPager:1.0.0")
+    implementation ("com.github.chrisbanes:PhotoView:2.0.0")
     implementation ("com.ms-square:expandableTextView:0.1.4")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")

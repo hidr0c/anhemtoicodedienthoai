@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.sinhvien.anhemtoicodedienthoai.API.type.Manga.Manga;
 import com.sinhvien.anhemtoicodedienthoai.API.type.Relationship.CoverArt;
 import com.sinhvien.anhemtoicodedienthoai.API.type.Relationship.Relationship;
+import com.sinhvien.anhemtoicodedienthoai.Detail.MangaInfoActivity;
 import com.sinhvien.anhemtoicodedienthoai.R;
 import com.squareup.picasso.Picasso;
 

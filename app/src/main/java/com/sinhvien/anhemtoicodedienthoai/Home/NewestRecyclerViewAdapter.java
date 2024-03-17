@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.sinhvien.anhemtoicodedienthoai.API.type.Manga.Manga;
 import com.sinhvien.anhemtoicodedienthoai.API.type.Relationship.CoverArt;
 import com.sinhvien.anhemtoicodedienthoai.API.type.Relationship.Relationship;
-import com.sinhvien.anhemtoicodedienthoai.MangaDetailFragment;
+import com.sinhvien.anhemtoicodedienthoai.Detail.MangaInfoActivity;
 import com.sinhvien.anhemtoicodedienthoai.R;
 import com.squareup.picasso.Picasso;
 
@@ -62,7 +62,7 @@ public class NewestRecyclerViewAdapter extends RecyclerView.Adapter<NewestRecycl
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent (view.getContext(), MangaDetailFragment.class);
+                Intent intent = new Intent (view.getContext(), MangaInfoActivity.class);
                 intent.putExtra("mangaId", manga[position].id);
                 view.getContext().startActivity(intent);
             }

@@ -1,8 +1,13 @@
 package com.sinhvien.anhemtoicodedienthoai.Home;
 
 import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -10,21 +15,15 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.sinhvien.anhemtoicodedienthoai.MainActivity;
-import com.sinhvien.anhemtoicodedienthoai.R;
-
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.Toast;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.sinhvien.anhemtoicodedienthoai.API.ApiService;
 import com.sinhvien.anhemtoicodedienthoai.API.type.Manga.Manga;
+import com.sinhvien.anhemtoicodedienthoai.API.type.Manga.MangaRespone;
+import com.sinhvien.anhemtoicodedienthoai.API.type.Relationship.Relationship;
+import com.sinhvien.anhemtoicodedienthoai.API.type.Relationship.RelationshipDeserializer;
+import com.sinhvien.anhemtoicodedienthoai.MainActivity;
+import com.sinhvien.anhemtoicodedienthoai.R;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -69,42 +68,42 @@ public class HomeFragment extends Fragment {
         btnAction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity)context).filterManga("391b0423-d847-456f-aff0-8b0cfc03066b", "Action");
+                ((MainActivity) context).filterManga("391b0423-d847-456f-aff0-8b0cfc03066b", "Action");
             }
         });
 
         btnDrama.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity)context).filterManga("b9af3a63-f058-46de-a9a0-e0c13906197a", "Drama");
+                ((MainActivity) context).filterManga("b9af3a63-f058-46de-a9a0-e0c13906197a", "Drama");
             }
         });
 
         btnPsychological.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity)context).filterManga("3b60b75c-a2d7-4860-ab56-05f391bb889c", "Psychological");
+                ((MainActivity) context).filterManga("3b60b75c-a2d7-4860-ab56-05f391bb889c", "Psychological");
             }
         });
 
         btnComedy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity)context).filterManga("4d32cc48-9f00-4cca-9b5a-a839f0764984", "Comedy");
+                ((MainActivity) context).filterManga("4d32cc48-9f00-4cca-9b5a-a839f0764984", "Comedy");
             }
         });
 
         btnRomance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity)context).filterManga("423e2eae-a7a2-4a8b-ac03-a8351462d71d", "Romance");
+                ((MainActivity) context).filterManga("423e2eae-a7a2-4a8b-ac03-a8351462d71d", "Romance");
             }
         });
 
         btnSoL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity)context).filterManga("e5301a23-ebd9-49dd-a0cb-2add944c7fe9", "Slice of Life");
+                ((MainActivity) context).filterManga("e5301a23-ebd9-49dd-a0cb-2add944c7fe9", "Slice of Life");
             }
         });
 
@@ -119,7 +118,7 @@ public class HomeFragment extends Fragment {
 
         ApiService apiService = retrofitRelate.create(ApiService.class);
 
-        Call<MangaResponse> mangaApiCall = apiService.getManga(
+        Call<MangaRespone> mangaApiCall = apiService.getManga(
                 new String[]{"cover_art"},
                 20,
                 0,
@@ -133,11 +132,11 @@ public class HomeFragment extends Fragment {
                 null
         );
 
-        mangaApiCall.enqueue(new Callback<MangaResponse>() {
+        mangaApiCall.enqueue(new Callback<MangaRespone>() {
             @Override
-            public void onResponse(Call<MangaResponse> call, Response<MangaResponse> response) {
+            public void onResponse(Call<MangaRespone> call, Response<MangaRespone> response) {
                 if (response.isSuccessful()) {
-                    MangaResponse res = response.body();
+                    MangaRespone res = response.body();
                     manga = res.data;
                     newestAdapter = new NewestRecyclerViewAdapter(context, manga);
                     newestMangaList.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
@@ -146,7 +145,7 @@ public class HomeFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<MangaResponse> call, Throwable t) {
+            public void onFailure(Call<MangaRespone> call, Throwable t) {
                 Log.e("err", t.toString());
                 Toast.makeText(context, "Unable to fetch manga", Toast.LENGTH_SHORT).show();
             }
@@ -166,11 +165,11 @@ public class HomeFragment extends Fragment {
                 null
         );
 
-        mangaApiCall.enqueue(new Callback<MangaResponse>() {
+        mangaApiCall.enqueue(new Callback<MangaRespone>() {
             @Override
-            public void onResponse(Call<MangaResponse> call, Response<MangaResponse> response) {
+            public void onResponse(Call<MangaRespone> call, Response<MangaRespone> response) {
                 if (response.isSuccessful()) {
-                    MangaResponse res = response.body();
+                    MangaRespone res = response.body();
                     manga = res.data;
                     hottestAdapter = new HottestRecyclerViewAdapter(context, manga);
                     hottestMangaList.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
@@ -179,7 +178,7 @@ public class HomeFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<MangaResponse> call, Throwable t) {
+            public void onFailure(Call<MangaRespone> call, Throwable t) {
                 Log.e("err", t.toString());
                 Toast.makeText(context, "Unable to fetch manga", Toast.LENGTH_SHORT).show();
             }
@@ -199,11 +198,11 @@ public class HomeFragment extends Fragment {
                 null
         );
 
-        mangaApiCall.enqueue(new Callback<MangaResponse>() {
+        mangaApiCall.enqueue(new Callback<MangaRespone>() {
             @Override
-            public void onResponse(Call<MangaResponse> call, Response<MangaResponse> response) {
+            public void onResponse(Call<MangaRespone> call, Response<MangaRespone> response) {
                 if (response.isSuccessful()) {
-                    MangaResponse res = response.body();
+                    MangaRespone res = response.body();
                     manga = res.data;
 
                     mostRatedAdapter = new MostRatedRecyclerViewAdapter(context, manga);
@@ -213,7 +212,7 @@ public class HomeFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<MangaResponse> call, Throwable t) {
+            public void onFailure(Call<MangaRespone> call, Throwable t) {
                 Log.e("err", t.toString());
                 Toast.makeText(context, "Unable to fetch manga", Toast.LENGTH_SHORT).show();
             }
@@ -222,3 +221,4 @@ public class HomeFragment extends Fragment {
 
         return view;
     }
+}

@@ -32,9 +32,16 @@ import com.google.gson.GsonBuilder;
 import com.ms.square.android.expandabletextview.ExpandableTextView;
 import com.sinhvien.anhemtoicodedienthoai.API.ApiService;
 import com.sinhvien.anhemtoicodedienthoai.API.type.Chapter.Chapter;
+import com.sinhvien.anhemtoicodedienthoai.API.type.Chapter.ChapterRespone;
+import com.sinhvien.anhemtoicodedienthoai.API.type.Manga.MangaDetailRespone;
+import com.sinhvien.anhemtoicodedienthoai.API.type.Relationship.AuthorArtist;
+import com.sinhvien.anhemtoicodedienthoai.API.type.Relationship.CoverArt;
 import com.sinhvien.anhemtoicodedienthoai.API.type.Relationship.Relationship;
 import com.sinhvien.anhemtoicodedienthoai.API.type.Relationship.RelationshipDeserializer;
+import com.sinhvien.anhemtoicodedienthoai.API.type.Relationship.ScanlationGroup;
+import com.sinhvien.anhemtoicodedienthoai.API.type.Static.StaticRespone;
 import com.sinhvien.anhemtoicodedienthoai.R;
+import com.sinhvien.anhemtoicodedienthoai.Reader.ReaderActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -145,13 +152,13 @@ public class MangaInfoActivity extends AppCompatActivity {
         ApiService apiRelateService = retrofitRelate.create(ApiService.class);
         ApiService apiService = retrofit.create(ApiService.class);
 
-        Call<MangaDetailResponse> mangaApiCall = apiRelateService.getMangaDetail(mangaId, new String[]{"author", "artist", "cover_art"});
-        Call<StatisticResponse> ratingCall = apiService.getStatistic(mangaId);
-        mangaApiCall.enqueue(new Callback<MangaDetailResponse>() {
+        Call<MangaDetailRespone> mangaApiCall = apiRelateService.getMangaDetail(mangaId, new String[]{"author", "artist", "cover_art"});
+        Call<StaticRespone> ratingCall = apiService.getStatistic(mangaId);
+        mangaApiCall.enqueue(new Callback<MangaDetailRespone>() {
             @Override
-            public void onResponse(@NonNull Call<MangaDetailResponse> call, @NonNull Response<MangaDetailResponse> response) {
+            public void onResponse(@NonNull Call<MangaDetailRespone> call, @NonNull Response<MangaDetailRespone> response) {
                 if (response.isSuccessful()) {
-                    MangaDetailResponse res = response.body();
+                    MangaDetailRespone res = response.body();
                     if (res.data.attributes.title.en != null) {
                         mangaName = res.data.attributes.title.en;
                     } else if (res.data.attributes.title.ja != null) {
@@ -181,7 +188,7 @@ public class MangaInfoActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(@NonNull Call<MangaDetailResponse> call, Throwable t) {
+            public void onFailure(@NonNull Call<MangaDetailRespone> call, Throwable t) {
                 Log.e("err", t.toString());
                 Toast.makeText(MangaInfoActivity.this, "Unable to get manga info", Toast.LENGTH_SHORT).show();
             }
@@ -195,17 +202,17 @@ public class MangaInfoActivity extends AppCompatActivity {
         }
 
         getChapter(apiRelateService, lang);
-        ratingCall.enqueue(new Callback<StatisticResponse>() {
+        ratingCall.enqueue(new Callback<StaticRespone>() {
             @Override
-            public void onResponse(Call<StatisticResponse> call, Response<StatisticResponse> response) {
+            public void onResponse(Call<StaticRespone> call, Response<StaticRespone> response) {
                 if (response.isSuccessful()) {
-                    StatisticResponse res = response.body();
-                    tvMangaRating.setText(String.format("%.2f", res.statistics.get(mangaId).rating.average));
+                    StaticRespone res = response.body();
+                    tvMangaRating.setText(String.format("%.2f", res.statistics.get(mangaId).rating.avg));
                 }
             }
 
             @Override
-            public void onFailure(Call<StatisticResponse> call, Throwable t) {
+            public void onFailure(Call<StaticRespone> call, Throwable t) {
                 Log.e("err", t.toString());
                 Toast.makeText(MangaInfoActivity.this, "Unable to get manga rating", Toast.LENGTH_SHORT).show();
             }
@@ -392,14 +399,14 @@ public class MangaInfoActivity extends AppCompatActivity {
     }
 
     private void getChapter(ApiService apiService, String[] language) {
-        Call<ChapterResponse> chapterCall = apiService.getMangaChapters(mangaId, language, new String[]{"scanlation_group"}, 500, 0, "asc");
+        Call<ChapterRespone> chapterCall = apiService.getMangaChapters(mangaId, language, new String[]{"scanlation_group"}, 500, 0, "asc");
 
-        chapterCall.enqueue(new Callback<ChapterResponse>() {
+        chapterCall.enqueue(new Callback<ChapterRespone>() {
             @Override
-            public void onResponse(Call<ChapterResponse> call, Response<ChapterResponse> response) {
+            public void onResponse(Call<ChapterRespone> call, Response<ChapterRespone> response) {
                 Log.i("call", response.toString());
                 if (response.isSuccessful()) {
-                    ChapterResponse res = response.body();
+                    ChapterRespone res = response.body();
                     data = res.data;
                     tvChapterList.setText(data.length + " Chapters");
                     adapter = getChapterAdapter();
@@ -411,7 +418,7 @@ public class MangaInfoActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<ChapterResponse> call, Throwable t) {
+            public void onFailure(Call<ChapterRespone> call, Throwable t) {
                 Log.e("err", t.toString());
                 Toast.makeText(MangaInfoActivity.this, "Unable to get manga chapters", Toast.LENGTH_SHORT).show();
             }
