@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchFragment"
+    android:orientation="vertical"
+    android:background="@color/beige">
+
+    <!-- TODO: Update blank fragment layout -->
+<!--    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/Searchmanga" />-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/Searchmanga"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

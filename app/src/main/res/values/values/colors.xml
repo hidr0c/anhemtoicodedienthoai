@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#607274</color>
+    <color name="beige">#FAEED1</color>
+    <color name="coffee">#DED0B6</color>
+    <color name="blabla">#B2A59B</color>
+    <color name="tim">#D0BFFF</color>
+    <color name="maurenzi">#bfe1ff</color>
+    <color name="vc">#00ffffff</color>
+    <color name="maurenzi2">#d5f2f5</color>
+    <color name="darkgreen">#12484E</color>
+    <color name="hint">#8A8A8A</color>
+    <color name="rating">#F8B200</color>
+    <color name="main_blue">#45AEFF</color>
+
+</resources>
