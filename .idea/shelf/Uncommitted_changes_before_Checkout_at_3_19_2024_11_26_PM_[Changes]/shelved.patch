@@ -1,0 +1,349 @@
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<resources>\r\n    <color name=\"black\">#FF000000</color>\r\n    <color name=\"white\">#FFFFFFFF</color>\r\n    <color name=\"grey\">#607274</color>\r\n    <color name=\"beige\">#FAEED1</color>\r\n    <color name=\"coffee\">#DED0B6</color>\r\n    <color name=\"blabla\">#B2A59B</color>\r\n    <color name=\"tim\">#D0BFFF</color>\r\n    <color name=\"maurenzi\">#bfe1ff</color>\r\n    <color name=\"vc\">#00ffffff</color>\r\n    <color name=\"maurenzi2\">#d5f2f5</color>\r\n    <color name=\"darkgreen\">#12484E</color>\r\n    <color name=\"hint\">#8A8A8A</color>\r\n    <color name=\"rating\">#F8B200</color>\r\n    <color name=\"main_blue\">#45AEFF</color>\r\n\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/colors.xml b/app/src/main/res/values/colors.xml
+--- a/app/src/main/res/values/colors.xml	(revision 9a213ddefe9944feb90659526f3f2ae66a9f1774)
++++ b/app/src/main/res/values/colors.xml	(date 1710864968738)
+@@ -1,5 +1,10 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
++    <color name="cyan">#18FFFF</color>
++    <color name="colorTextInputBackground">#F7F7F7</color>
++    <color name="actionbarOpacity">#00000000</color>
++    <color name="colorBackground">#fff</color>
++    <color name="colorPrimary">#26C6DA</color>
+     <color name="black">#FF000000</color>
+     <color name="white">#FFFFFFFF</color>
+     <color name="grey">#607274</color>
+Index: app/src/main/res/values/style.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<resources>\r\n    <style name=\"GreenText\" parent=\"TextAppearance.AppCompat\">\r\n        <item name=\"android:textColor\">#607274</item>\r\n    </style>\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/style.xml b/app/src/main/res/values/style.xml
+--- a/app/src/main/res/values/style.xml	(revision 9a213ddefe9944feb90659526f3f2ae66a9f1774)
++++ b/app/src/main/res/values/style.xml	(date 1710864889749)
+@@ -3,4 +3,11 @@
+     <style name="GreenText" parent="TextAppearance.AppCompat">
+         <item name="android:textColor">#607274</item>
+     </style>
++    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
++    <!-- Customize your theme here. -->
++    <item name="colorPrimary">@color/colorPrimary</item>
++    </style>
++    <style name="Button1" parent="Widget.AppCompat.Button.Colored">
++    <item name="android:background">@drawable/button1_bg</item>
++    </style>
+ </resources>
+\ No newline at end of file
+Index: .idea/.gitignore
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	(revision 9a213ddefe9944feb90659526f3f2ae66a9f1774)
++++ /dev/null	(revision 9a213ddefe9944feb90659526f3f2ae66a9f1774)
+@@ -1,3 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+Index: .idea/discord.xml
+===================================================================
+diff --git a/.idea/discord.xml b/.idea/discord.xml
+deleted file mode 100644
+--- a/.idea/discord.xml	(revision 9a213ddefe9944feb90659526f3f2ae66a9f1774)
++++ /dev/null	(revision 9a213ddefe9944feb90659526f3f2ae66a9f1774)
+@@ -1,7 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="DiscordProjectSettings">
+-    <option name="show" value="ASK" />
+-    <option name="description" value="" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/render.experimental.xml
+===================================================================
+diff --git a/.idea/render.experimental.xml b/.idea/render.experimental.xml
+deleted file mode 100644
+--- a/.idea/render.experimental.xml	(revision 9a213ddefe9944feb90659526f3f2ae66a9f1774)
++++ /dev/null	(revision 9a213ddefe9944feb90659526f3f2ae66a9f1774)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="RenderSettings">
+-    <option name="showDecorations" value="true" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: app/src/main/java/com/sinhvien/anhemtoicodedienthoai/CreditActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/sinhvien/anhemtoicodedienthoai/CreditActivity.java b/app/src/main/java/com/sinhvien/anhemtoicodedienthoai/CreditActivity.java
+new file mode 100644
+--- /dev/null	(date 1710863949651)
++++ b/app/src/main/java/com/sinhvien/anhemtoicodedienthoai/CreditActivity.java	(date 1710863949651)
+@@ -0,0 +1,30 @@
++package com.sinhvien.anhemtoicodedienthoai;
++
++import android.app.Activity;
++import android.os.Bundle;
++import android.view.MenuItem;
++
++import androidx.annotation.NonNull;
++import androidx.appcompat.app.AppCompatActivity;
++
++public class CreditActivity extends AppCompatActivity {
++    androidx.appcompat.widget.Toolbar toolbarSettings;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState){
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_credit);
++
++        setSupportActionBar(toolbarSettings);
++        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
++    }
++    public boolean onOptionsItemSelected(@NonNull MenuItem item){
++        int itemID=item.getItemId();
++        if(itemID==android.R.id.home){
++            finish();
++        }
++        return super.onOptionsItemSelected(item);
++    }
++
++
++}
+Index: app/src/main/res/drawable/button1_bg.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/button1_bg.xml b/app/src/main/res/drawable/button1_bg.xml
+new file mode 100644
+--- /dev/null	(date 1710864923134)
++++ b/app/src/main/res/drawable/button1_bg.xml	(date 1710864923134)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android"
++    android:shape="rectangle">
++    <solid android:color="@color/cyan"/>
++    <corners android:topRightRadius="30dp"
++        android:topLeftRadius="30dp"
++        android:bottomLeftRadius="30dp"
++        android:bottomRightRadius="30dp" />
++</shape>
+\ No newline at end of file
+Index: app/src/main/res/drawable/ic_back.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_back.xml b/app/src/main/res/drawable/ic_back.xml
+new file mode 100644
+--- /dev/null	(date 1710865170009)
++++ b/app/src/main/res/drawable/ic_back.xml	(date 1710865170009)
+@@ -0,0 +1,9 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="24dp"
++    android:height="24dp"
++    android:viewportWidth="400.004"
++    android:viewportHeight="400.004">
++    <path
++        android:fillColor="#FF000000"
++        android:pathData="M382.688,182.686H59.116l77.209,-77.214c6.764,-6.76 6.764,-17.726 0,-24.485c-6.764,-6.764 -17.73,-6.764 -24.484,0L5.073,187.757c-6.764,6.76 -6.764,17.727 0,24.485l106.768,106.775c3.381,3.383 7.812,5.072 12.242,5.072c4.43,0 8.861,-1.689 12.242,-5.072c6.764,-6.76 6.764,-17.726 0,-24.484l-77.209,-77.218h323.572c9.562,0 17.316,-7.753 17.316,-17.315C400.004,190.438 392.251,182.686 382.688,182.686z"/>
++</vector>
+Index: app/src/main/res/drawable/ic_mail.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_mail.xml b/app/src/main/res/drawable/ic_mail.xml
+new file mode 100644
+--- /dev/null	(date 1710865048458)
++++ b/app/src/main/res/drawable/ic_mail.xml	(date 1710865048458)
+@@ -0,0 +1,18 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="18dp"
++    android:height="18dp"
++    android:viewportWidth="550.795"
++    android:viewportHeight="550.795">
++    <path
++        android:fillColor="#cccccc"
++        android:pathData="M501.613,491.782c12.381,0 23.109,-4.088 32.229,-12.16L377.793,323.567c-3.744,2.681 -7.373,5.288 -10.801,7.767c-11.678,8.604 -21.156,15.318 -28.434,20.129c-7.277,4.822 -16.959,9.737 -29.045,14.755c-12.094,5.024 -23.361,7.528 -33.813,7.528h-0.306h-0.306c-10.453,0 -21.72,-2.503 -33.813,-7.528c-12.093,-5.018 -21.775,-9.933 -29.045,-14.755c-7.277,-4.811 -16.75,-11.524 -28.434,-20.129c-3.256,-2.387 -6.867,-5.006 -10.771,-7.809L16.946,479.622c9.119,8.072 19.854,12.16 32.234,12.16H501.613z"/>
++    <path
++        android:fillColor="#cccccc"
++        android:pathData="M31.047,225.299C19.37,217.514 9.015,208.598 0,198.555V435.98l137.541,-137.541C110.025,279.229 74.572,254.877 31.047,225.299z"/>
++    <path
++        android:fillColor="#cccccc"
++        android:pathData="M520.059,225.299c-41.865,28.336 -77.447,52.73 -106.75,73.195l137.486,137.492V198.555C541.98,208.396 531.736,217.306 520.059,225.299z"/>
++    <path
++        android:fillColor="#cccccc"
++        android:pathData="M501.613,59.013H49.181c-15.784,0 -27.919,5.33 -36.42,15.979C4.253,85.646 0.006,98.97 0.006,114.949c0,12.907 5.636,26.892 16.903,41.959c11.267,15.061 23.256,26.891 35.961,35.496c6.965,4.921 27.969,19.523 63.012,43.801c18.917,13.109 35.368,24.535 49.505,34.395c12.05,8.396 22.442,15.667 31.022,21.701c0.985,0.691 2.534,1.799 4.59,3.269c2.215,1.591 5.018,3.61 8.476,6.107c6.659,4.816 12.191,8.709 16.597,11.683c4.4,2.975 9.731,6.298 15.985,9.988c6.249,3.685 12.143,6.456 17.675,8.299c5.533,1.842 10.655,2.766 15.367,2.766h0.306h0.306c4.711,0 9.834,-0.924 15.368,-2.766c5.531,-1.843 11.42,-4.608 17.674,-8.299c6.248,-3.69 11.572,-7.02 15.986,-9.988c4.406,-2.974 9.938,-6.866 16.598,-11.683c3.451,-2.497 6.254,-4.517 8.469,-6.102c2.057,-1.476 3.605,-2.577 4.596,-3.274c6.684,-4.651 17.1,-11.892 31.104,-21.616c25.482,-17.705 63.01,-43.764 112.742,-78.281c14.957,-10.447 27.453,-23.054 37.496,-37.803c10.025,-14.749 15.051,-30.22 15.051,-46.408c0,-13.525 -4.873,-25.098 -14.598,-34.737C526.461,63.829 514.932,59.013 501.613,59.013z"/>
++</vector>
+Index: app/src/main/res/layout/activity_forgot_password.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"@color/white\"\r\n    tools:context=\".ForgotPasswordActivity\">\r\n\r\n    <androidx.appcompat.widget.Toolbar\r\n        android:id=\"@+id/toolbar\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:background=\"@color/actionbarOpacity\"\r\n        app:theme=\"@style/TransparentToolbar\"\r\n        app:navigationIcon=\"@drawable/ic_back\"/>\r\n\r\n    <ScrollView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:layout_below=\"@id/toolbar\"\r\n        android:fillViewport=\"true\"\r\n        android:fitsSystemWindows=\"true\"\r\n        android:orientation=\"vertical\"\r\n        tools:context=\"in.insideandroid.template.LoginActivity\">\r\n\r\n        <RelativeLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"vertical\"\r\n            android:scrollbarThumbHorizontal=\"@null\"\r\n            android:scrollbarThumbVertical=\"@null\">\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_centerVertical=\"true\"\r\n                android:orientation=\"vertical\">\r\n\r\n                <ImageView\r\n                    android:layout_width=\"234dp\"\r\n                    android:layout_height=\"189dp\"\r\n                    android:layout_gravity=\"center\"\r\n                    android:contentDescription=\"TODO\"\r\n                    app:srcCompat=\"@drawable/forget_password\" />\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_gravity=\"center\"\r\n                    android:layout_marginBottom=\"8dp\"\r\n                    android:text=\"Quen MK ha ni'? khong sao dau de tui\"\r\n                    android:textColor=\"@color/colorPrimary\"\r\n                    android:textSize=\"20sp\"\r\n                    android:textStyle=\"bold\" />\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_gravity=\"center\"\r\n                    android:layout_marginBottom=\"16dp\"\r\n                    android:text=\"Nhập Email vào bên dưới\"\r\n                    android:textColor=\"#A5A5A5\" />\r\n\r\n                <androidx.cardview.widget.CardView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_gravity=\"center\"\r\n                    android:layout_margin=\"4dp\"\r\n                    app:cardBackgroundColor=\"@color/colorTextInputBackground\"\r\n                    app:cardCornerRadius=\"24dp\"\r\n                    app:cardElevation=\"0dp\">\r\n\r\n                    <com.google.android.material.textfield.TextInputEditText\r\n                        android:id=\"@+id/et_email\"\r\n                        android:layout_width=\"wrap_content\"\r\n                        android:layout_height=\"wrap_content\"\r\n                        android:layout_gravity=\"center\"\r\n                        android:layout_marginLeft=\"12dp\"\r\n                        android:layout_marginRight=\"12dp\"\r\n                        android:background=\"@android:color/transparent\"\r\n                        android:drawableStart=\"@drawable/ic_mail\"\r\n                        android:drawableLeft=\"@drawable/ic_mail\"\r\n                        android:drawablePadding=\"12dp\"\r\n                        android:hint=\"Email\"\r\n                        android:imeOptions=\"actionDone\"\r\n                        android:inputType=\"textEmailAddress\"\r\n                        android:minWidth=\"320dp\"\r\n                        android:minHeight=\"45dp\"\r\n                        android:singleLine=\"true\" />\r\n                </androidx.cardview.widget.CardView>\r\n\r\n                <Button\r\n                    android:id=\"@+id/button_send\"\r\n                    style=\"@style/Button1\"\r\n                    android:layout_width=\"342dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_gravity=\"center\"\r\n                    android:layout_marginTop=\"16dp\"\r\n                    android:layout_marginBottom=\"16dp\"\r\n                    android:text=\"Gửi\" />\r\n\r\n            </LinearLayout>\r\n\r\n        </RelativeLayout>\r\n\r\n\r\n    </ScrollView>\r\n</RelativeLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_forgot_password.xml b/app/src/main/res/layout/activity_forgot_password.xml
+--- a/app/src/main/res/layout/activity_forgot_password.xml	(revision 9a213ddefe9944feb90659526f3f2ae66a9f1774)
++++ b/app/src/main/res/layout/activity_forgot_password.xml	(date 1710865073546)
+@@ -42,7 +42,7 @@
+                     android:layout_height="189dp"
+                     android:layout_gravity="center"
+                     android:contentDescription="TODO"
+-                    app:srcCompat="@drawable/forget_password" />
++                    app:srcCompat="@drawable/troll" />
+ 
+                 <TextView
+                     android:layout_width="wrap_content"
+Index: .idea/deploymentTargetDropDown.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"deploymentTargetDropDown\">\r\n    <value>\r\n      <entry key=\"app\">\r\n        <State>\r\n          <targetSelectedWithDropDown>\r\n            <Target>\r\n              <type value=\"QUICK_BOOT_TARGET\" />\r\n              <deviceKey>\r\n                <Key>\r\n                  <type value=\"VIRTUAL_DEVICE_PATH\" />\r\n                  <value value=\"C:\\Users\\Admin\\.android\\avd\\Pixel_7_Pro_API_34.avd\" />\r\n                </Key>\r\n              </deviceKey>\r\n            </Target>\r\n          </targetSelectedWithDropDown>\r\n          <timeTargetWasSelectedWithDropDown value=\"2024-03-19T12:06:54.478529800Z\" />\r\n        </State>\r\n      </entry>\r\n    </value>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/deploymentTargetDropDown.xml b/.idea/deploymentTargetDropDown.xml
+--- a/.idea/deploymentTargetDropDown.xml	(revision 9a213ddefe9944feb90659526f3f2ae66a9f1774)
++++ b/.idea/deploymentTargetDropDown.xml	(date 1710862061758)
+@@ -3,20 +3,7 @@
+   <component name="deploymentTargetDropDown">
+     <value>
+       <entry key="app">
+-        <State>
+-          <targetSelectedWithDropDown>
+-            <Target>
+-              <type value="QUICK_BOOT_TARGET" />
+-              <deviceKey>
+-                <Key>
+-                  <type value="VIRTUAL_DEVICE_PATH" />
+-                  <value value="C:\Users\Admin\.android\avd\Pixel_7_Pro_API_34.avd" />
+-                </Key>
+-              </deviceKey>
+-            </Target>
+-          </targetSelectedWithDropDown>
+-          <timeTargetWasSelectedWithDropDown value="2024-03-19T12:06:54.478529800Z" />
+-        </State>
++        <State />
+       </entry>
+     </value>
+   </component>
+Index: app/src/main/res/drawable/ic_person.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_person.xml b/app/src/main/res/drawable/ic_person.xml
+new file mode 100644
+--- /dev/null	(date 1710865273611)
++++ b/app/src/main/res/drawable/ic_person.xml	(date 1710865273611)
+@@ -0,0 +1,9 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="24dp"
++    android:height="24dp"
++    android:viewportWidth="24.0"
++    android:viewportHeight="24.0">
++    <path
++        android:fillColor="#cccccc"
++        android:pathData="M12,12c2.21,0 4,-1.79 4,-4s-1.79,-4 -4,-4 -4,1.79 -4,4 1.79,4 4,4zM12,14c-2.67,0 -8,1.34 -8,4v2h16v-2c0,-2.66 -5.33,-4 -8,-4z"/>
++</vector>
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"VcsDirectoryMappings\">\r\n    <mapping directory=\"$PROJECT_DIR$\" vcs=\"Git\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+--- a/.idea/vcs.xml	(revision 9a213ddefe9944feb90659526f3f2ae66a9f1774)
++++ b/.idea/vcs.xml	(date 1710862024044)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++    <mapping directory="" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: app/src/main/res/drawable/ic_lock.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_lock.xml b/app/src/main/res/drawable/ic_lock.xml
+new file mode 100644
+--- /dev/null	(date 1710865308280)
++++ b/app/src/main/res/drawable/ic_lock.xml	(date 1710865308280)
+@@ -0,0 +1,9 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="24dp"
++    android:height="24dp"
++    android:viewportWidth="24.0"
++    android:viewportHeight="24.0">
++    <path
++        android:fillColor="#cccccc"
++        android:pathData="M18,8h-1L17,6c0,-2.76 -2.24,-5 -5,-5S7,3.24 7,6v2L6,8c-1.1,0 -2,0.9 -2,2v10c0,1.1 0.9,2 2,2h12c1.1,0 2,-0.9 2,-2L20,10c0,-1.1 -0.9,-2 -2,-2zM12,17c-1.1,0 -2,-0.9 -2,-2s0.9,-2 2,-2 2,0.9 2,2 -0.9,2 -2,2zM15.1,8L8.9,8L8.9,6c0,-1.71 1.39,-3.1 3.1,-3.1 1.71,0 3.1,1.39 3.1,3.1v2z"/>
++</vector>
+Index: app/src/main/res/drawable/ic_phone.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_phone.xml b/app/src/main/res/drawable/ic_phone.xml
+new file mode 100644
+--- /dev/null	(date 1710865290733)
++++ b/app/src/main/res/drawable/ic_phone.xml	(date 1710865290733)
+@@ -0,0 +1,9 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="18dp"
++    android:height="18dp"
++    android:viewportWidth="360.025"
++    android:viewportHeight="360.025">
++    <path
++        android:fillColor="#cccccc"
++        android:pathData="M354.363,271.978c-11.661,-22.385 -28.972,-40.292 -51.43,-53.211c-8.664,-5.009 -16.844,-7.445 -25.008,-7.445c-3.176,0 -6.362,0.383 -9.489,1.134c-10.368,2.513 -20.326,7.363 -30.442,14.831c-3.194,2.357 -7.101,3.551 -11.614,3.551c-5.494,0 -11.444,-1.886 -15.518,-4.921c-29.574,-22.047 -54.67,-47.141 -76.712,-76.711c-4.334,-5.82 -7.769,-18.471 -1.376,-27.136c7.47,-10.118 12.322,-20.077 14.837,-30.461c2.694,-11.19 0.629,-22.467 -6.3,-34.455C128.376,34.669 110.468,17.359 88.089,5.7C80.837,1.92 73.416,0 66.033,0C53.686,0 42.13,5.363 32.62,15.499c-8.742,9.303 -16.471,19.154 -25.389,31.082C-0.932,57.51 -0.259,70.117 0.336,81.24l0.015,0.237c1.002,14.108 6.272,30.804 16.11,51.025c16.643,34.227 40.282,66.727 72.261,99.354c6.569,6.708 32.767,32.907 39.479,39.476c32.634,31.989 65.134,55.626 99.355,72.267c20.226,9.839 36.917,15.107 51.029,16.111l0.237,0.015c2.903,0.155 6.006,0.3 9.026,0.3c0.001,0 0.001,0 0.001,0c7.451,0 17.097,-0.818 25.631,-7.198c11.931,-8.916 21.784,-16.646 31.074,-25.378C360.843,312.168 364.508,291.429 354.363,271.978z"/>
++</vector>
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"gradleJvm\" value=\"#GRADLE_LOCAL_JAVA_HOME\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n          </set>\r\n        </option>\r\n        <option name=\"resolveExternalAnnotations\" value=\"false\" />\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+--- a/.idea/gradle.xml	(revision 9a213ddefe9944feb90659526f3f2ae66a9f1774)
++++ b/.idea/gradle.xml	(date 1710862024027)
+@@ -1,6 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="GradleMigrationSettings" migrationVersion="1" />
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" default=\"true\" project-jdk-name=\"jbr-17\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 9a213ddefe9944feb90659526f3f2ae66a9f1774)
++++ b/.idea/misc.xml	(date 1710862061750)
+@@ -1,3 +1,4 @@
++<?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
