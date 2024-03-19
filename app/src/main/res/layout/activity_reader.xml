@@ -23,9 +23,6 @@
         android:layout_height="48dp"
         android:layout_gravity="right|center_vertical"
         android:layout_marginRight="24dp"
-        android:layout_weight="1"
-        android:background="@drawable/reader_next_chapter"
-        android:backgroundTint="#FFFFFF"
         android:foreground="@drawable/ic_next_chap"
         android:foregroundGravity="center"
         android:foregroundTint="?attr/colorControlNormal"
@@ -37,10 +34,11 @@
         android:layout_height="48dp"
         android:layout_gravity="left|center_vertical"
         android:layout_marginLeft="24dp"
-        android:background="@drawable/reader_next_chapter"
+
         android:foreground="@drawable/ic_prev_chap"
         android:foregroundGravity="center"
         android:foregroundTint="?attr/colorControlNormal" />
+
 
     <androidx.viewpager.widget.DirectionalViewPager
         android:id="@+id/reader"
@@ -53,12 +51,12 @@
     <LinearLayout
         android:id="@+id/menu_down"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="65dp"
         android:layout_gravity="bottom"
         android:background="?attr/colorSecondary"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="6dp">
+        android:padding="2dp">
 
         <ImageButton
             android:id="@+id/ibtnDirect"
@@ -66,7 +64,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_phone_settings"
+            android:src="@drawable/ic_phonesettings"
             android:tint="?colorControlNormal" />
 
         <ImageButton
@@ -75,7 +73,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_prev"
+            android:src="@drawable/icon_back"
             android:tint="?colorControlNormal" />
 
         <TextView
@@ -88,7 +86,7 @@
             android:gravity="center"
             android:text="00/00"
             android:textColor="?attr/colorControlNormal"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
         <ImageButton
             android:id="@+id/ibtnNext"
@@ -96,7 +94,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_next"
+            android:src="@drawable/icons_next"
             android:tint="?colorControlNormal" />
 
         <ImageButton
@@ -105,7 +103,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_phone_rotate"
+            android:src="@drawable/rotate"
             android:tint="?colorControlNormal" />
 
     </LinearLayout>
