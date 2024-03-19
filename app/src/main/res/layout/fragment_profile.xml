@@ -12,11 +12,11 @@
         android:id="@+id/hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
         android:text="@string/HelloGuest"
         android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_marginTop="100dp"
-        android:layout_marginStart="30dp"/>
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnlg"
@@ -30,10 +30,11 @@
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold" />
+
     <Button
         android:id="@+id/btnlogout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="141dp"
         android:layout_marginStart="260dp"
         android:layout_marginTop="100dp"
         android:background="@android:color/transparent"
