@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:name="com.example.mangaapp_finalproject.HistoryFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layoutManager="LinearLayoutManager"
     tools:context=".SearchFragment"
     android:orientation="vertical"
-    android:background="@color/beige">
-
-    <!-- TODO: Update blank fragment layout -->
-<!--    <androidx.appcompat.widget.SearchView
+    >
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
         android:layout_width="match_parent"
-        android:layout_height="74dp"
-        android:layout_marginTop="100dp"
-        android:text="@string/Searchmanga" />-->
-    <EditText
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search for manga"
+        app:defaultQueryHint="Search for manga"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="@string/Searchmanga"/>
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        tools:listitem="@layout/fragment_item_row" />
 </LinearLayout>
